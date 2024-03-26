@@ -1,0 +1,16 @@
+<!-- 
+    STATELESS COMPONENTS:
+    Son plantillas que carecen de un estado propio.
+
+    STATEFULL COMPONENTS:
+    Manejan el estado (state) de la informacion.
+ -->
+
+<p>lista-usuarios works!</p>
+
+<ul #myList class="list-group">
+    <li class="list-group-item" *ngFor="let usuario of usuarios; let i = index">
+        {{ usuario.firstName + " " + usuario.lastName }}
+        <button (click)="deleteUser.emit(i)" class="btn btn-danger">X</button>
+      </li>
+</ul>
